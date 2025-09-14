@@ -1,0 +1,15 @@
+include README.md
+include LICENSE
+include pyproject.toml
+include MANIFEST.in
+
+recursive-include pyqt_widgets *.py
+recursive-include pyqt_widgets/examples *.py
+recursive-include tests *.py
+recursive-include docs *.md *.rst
+
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .DS_Store
+global-exclude *.so
+global-exclude .git*

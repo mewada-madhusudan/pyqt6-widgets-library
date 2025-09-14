@@ -1,0 +1,24 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="aiosqlite" />
+          <option value="cryptography" />
+          <option value="keyring" />
+          <option value="python-dotenv" />
+          <option value="pydantic" />
+          <option value="pytest" />
+          <option value="pytest-asyncio" />
+          <option value="pytest-qt" />
+          <option value="black" />
+          <option value="flake8" />
+          <option value="mypy" />
+          <option value="cx-Freeze" />
+          <option value="sphinx" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
