@@ -231,7 +231,6 @@ class SpeedDialFAB(FloatingActionButton):
 
     def add_speed_dial_action(self, name: str, icon: str, tooltip: str = ""):
         """Add speed dial action."""
-
         def action_callback():
             self.action_triggered.emit(name)
 

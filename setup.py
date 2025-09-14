@@ -33,6 +33,8 @@ setup(
     python_requires=">=3.8",
     install_requires=[
         "PyQt6>=6.4.0",
+        "PyQt6-Qt6>=6.4.0",
+        "PyQt6-sip>=13.4.0"
     ],
     extras_require={
         "dev": [
