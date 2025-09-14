@@ -1,0 +1,179 @@
+/* Custom CSS for PyQt6 Widgets Library Documentation */
+
+/* Color scheme */
+:root {
+    --primary-color: #3b82f6;
+    --secondary-color: #6b7280;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --error-color: #ef4444;
+    --background-color: #ffffff;
+    --surface-color: #f8fafc;
+    --text-color: #1f2937;
+}
+
+/* Header styling */
+.wy-nav-top {
+    background-color: var(--primary-color) !important;
+}
+
+/* Sidebar styling */
+.wy-nav-side {
+    background: linear-gradient(180deg, var(--surface-color) 0%, #e2e8f0 100%);
+}
+
+.wy-menu-vertical a {
+    color: var(--text-color);
+}
+
+.wy-menu-vertical a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Code blocks */
+.highlight {
+    background-color: var(--surface-color);
+    border-left: 4px solid var(--primary-color);
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+/* Admonitions */
+.admonition {
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.admonition.note {
+    border-left: 4px solid var(--primary-color);
+    background-color: #eff6ff;
+}
+
+.admonition.warning {
+    border-left: 4px solid var(--warning-color);
+    background-color: #fffbeb;
+}
+
+.admonition.tip {
+    border-left: 4px solid var(--success-color);
+    background-color: #ecfdf5;
+}
+
+/* Tables */
+.wy-table-responsive table td,
+.wy-table-responsive table th {
+    white-space: normal;
+}
+
+table.docutils {
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+table.docutils th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem;
+}
+
+table.docutils td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* API documentation */
+.py.class,
+.py.method,
+.py.function {
+    border-left: 3px solid var(--primary-color);
+    padding-left: 1rem;
+    margin: 1rem 0;
+}
+
+.py.class > dt {
+    background-color: var(--surface-color);
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+/* Code examples */
+.highlight-python {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.highlight-python .highlight {
+    border-left: none;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+/* Navigation improvements */
+.wy-nav-content {
+    max-width: 1200px;
+}
+
+/* Custom buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+/* Widget showcase styling */
+.widget-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.widget-card {
+    background-color: var(--surface-color);
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.widget-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.widget-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .widget-showcase {
+        grid-template-columns: 1fr;
+    }
+
+    .wy-nav-content {
+        padding: 1rem;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1f2937;
+        --surface-color: #374151;
+        --text-color: #f9fafb;
+    }
+
+    .wy-nav-content-wrap {
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+}

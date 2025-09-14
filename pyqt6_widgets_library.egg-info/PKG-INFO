@@ -1,0 +1,282 @@
+Metadata-Version: 2.4
+Name: pyqt6-widgets-library
+Version: 1.1.0
+Summary: A collection of polished, reusable PyQt6 widgets for building desktop applications
+Home-page: https://github.com/mewada-madhusudan/pyqt6-widgets-library
+Author: Madhusudan Mewada
+Author-email: Madhusudan Mewada <madhusudan@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/madhusudanmewada/pyqt6-widgets-library
+Project-URL: Repository, https://github.com/madhusudanmewada/pyqt6-widgets-library.git
+Project-URL: Issues, https://github.com/madhusudanmewada/pyqt6-widgets-library/issues
+Keywords: pyqt6,widgets,ui,desktop,gui,qt
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyQt6>=6.4.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-qt>=4.0; extra == "dev"
+Requires-Dist: black>=22.0; extra == "dev"
+Requires-Dist: flake8>=4.0; extra == "dev"
+Requires-Dist: mypy>=0.950; extra == "dev"
+Requires-Dist: pre-commit>=2.20.0; extra == "dev"
+Provides-Extra: examples
+Requires-Dist: Pillow>=9.0; extra == "examples"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# PyQt6 Widgets Library
+
+A comprehensive collection of **polished, reusable PyQt6 widgets** for building modern desktop applications with consistent UI/UX.
+
+## 🌟 Features
+
+- **50+ Pre-built Widgets** across 7 categories
+- **UX-First Design** with modern styling and animations
+- **Modular Architecture** for easy customization and extension
+- **Theme Management** with light/dark mode support
+- **Comprehensive Documentation** with usage examples
+- **Cross-Platform** support (Windows, macOS, Linux)
+
+## 📦 Installation
+
+```bash
+pip install pyqt6-widgets-library
+```
+
+Or install from source:
+
+```bash
+git clone https://github.com/madhusudanmewada/pyqt6-widgets-library.git
+cd pyqt6-widgets-library
+pip install -e .
+```
+
+## 🚀 Quick Start
+
+```python
+import sys
+from PyQt6.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget
+from pyqt_widgets import InfoCardWidget, BaseButton, theme_manager
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("PyQt6 Widgets Demo")
+        
+        # Central widget
+        central_widget = QWidget()
+        layout = QVBoxLayout(central_widget)
+        
+        # Add widgets
+        card = InfoCardWidget(
+            title="Welcome!",
+            subtitle="Getting Started",
+            description="This is an example of the PyQt6 Widgets Library."
+        )
+        layout.addWidget(card)
+        
+        button = BaseButton("Click Me!", "primary", "medium")
+        layout.addWidget(button)
+        
+        self.setCentralWidget(central_widget)
+
+app = QApplication(sys.argv)
+app.setStyleSheet(theme_manager.get_stylesheet())
+
+window = MainWindow()
+window.show()
+
+app.exec()
+```
+
+## 📚 Widget Categories
+
+### 🃏 Cards
+- **InfoCardWidget** - Display information with title, subtitle, and description
+- **ProfileCardWidget** - User profile cards with avatar and actions
+- **StatCardWidget** - Statistics display with trends and indicators
+- **ExpandableCardWidget** - Collapsible content cards
+- **HoverActionCardWidget** - Cards with hover-revealed actions
+- **ImageCardWidget** - Image cards with overlay descriptions
+- **SelectableCardWidget** - Multi-selectable cards with checkboxes
+
+### 🧭 Navigation
+- **SidebarNavWidget** - Collapsible sidebar with icons and grouping
+- **BreadcrumbBarWidget** - Hierarchical navigation trail
+- **TabBarWidget** - Closeable tabs with overflow handling
+- **AccordionMenuWidget** - Collapsible menu sections
+- **CommandPaletteWidget** - Searchable command interface
+- **PaginationWidget** - Numeric, simple, and load-more pagination
+- **DockablePanelWidget** - Detachable floating panels
+
+### 💬 Feedback & Information
+- **NotificationToastWidget** - Auto-dismissing notifications
+- **SnackbarWidget** - Bottom-floating action messages
+- **StatusChipWidget** - Colored status indicators
+- **BadgeLabel** - Labels with count indicators
+- **ProgressOverlayWidget** - Loading overlays with progress
+- **TooltipWidget** - Enhanced tooltips with actions
+- **EmptyStateWidget** - Friendly empty state placeholders
+
+### 📊 Data & Visualization
+- **DataTableWidget** - Sortable tables with filtering
+- **TimelineWidget** - Chronological event display
+- **KanbanBoardWidget** - Draggable task management
+- **PropertyGridWidget** - Key-value property editor
+- **MiniChartCard** - Inline charts and graphs
+- **TreeViewWidget** - Hierarchical data display
+- **FileExplorerWidget** - File and folder browser
+
+### 👥 User & Social
+- **UserAvatarWidget** - Circular avatars with fallbacks
+- **UserListItemWidget** - User list with actions
+- **ChatBubbleWidget** - Message bubbles for chat
+- **CommentThreadWidget** - Nested comment display
+- **RatingStarWidget** - Interactive star ratings
+- **ReactionBarWidget** - Emoji reaction buttons
+- **ProfileHeaderWidget** - User profile headers
+
+### 📝 Forms & Input
+- **SearchBoxWithSuggestions** - Live search with autocomplete
+- **InlineEditLabel** - Click-to-edit labels
+- **TagInputWidget** - Multi-tag input with chips
+- **RichTextEditorWidget** - Formatted text editing
+- **FormStepperWidget** - Multi-step form wizard
+- **DateRangePickerWidget** - Date range selection
+- **ToggleSwitchWidget** - Modern on/off switches
+- **SliderWithInputWidget** - Slider with numeric input
+
+### 🔧 Utility
+- **FloatingActionButton** - Circular floating actions
+- **QuickSettingsPanel** - System-style settings panel
+- **PinnedNoteWidget** - Sticky note annotations
+- **ClipboardHistoryWidget** - Clipboard management
+- **GlobalSearchWidget** - App-wide search interface
+- **ShortcutHelperWidget** - Keyboard shortcut display
+
+## 🎨 Theming
+
+The library includes a powerful theming system with built-in light and dark themes:
+
+```python
+from pyqt_widgets import theme_manager
+
+# Switch themes
+theme_manager.set_theme("dark")
+theme_manager.set_theme("light")
+
+# Get theme colors
+primary_color = theme_manager.get_color("primary")
+background_color = theme_manager.get_color("background")
+
+# Apply theme to application
+app.setStyleSheet(theme_manager.get_stylesheet())
+```
+
+## 🏗️ Base Components
+
+All widgets are built on top of reusable base components:
+
+- **BaseCardWidget** - Foundation for all card widgets
+- **BasePopupWidget** - Base for overlays and popups
+- **BaseButton** - Enhanced button with variants and states
+- **ThemeManager** - Centralized styling management
+- **AnimationHelpers** - Smooth transitions and effects
+
+## 📖 Examples
+
+Run the included examples to see widgets in action:
+
+```bash
+# Basic examples
+pyqt6-widgets-demo
+
+# Card showcase
+pyqt6-cards-showcase
+```
+
+## 🔧 Development
+
+### Setting up development environment
+
+```bash
+git clone https://github.com/madhusudanmewada/pyqt6-widgets-library.git
+cd pyqt6-widgets-library
+
+# Install in development mode
+pip install -e ".[dev]"
+
+# Run tests
+pytest
+
+# Format code
+black pyqt_widgets/
+
+# Type checking
+mypy pyqt_widgets/
+```
+
+### Project Structure
+
+```
+pyqt6_widgets_library/
+├── pyqt_widgets/
+│   ├── base/              # Base components
+│   ├── cards/             # Card widgets
+│   ├── navigation/        # Navigation widgets
+│   ├── feedback/          # Feedback widgets
+│   ├── data/              # Data widgets
+│   ├── user/              # User widgets
+│   ├── forms/             # Form widgets
+│   ├── utility/           # Utility widgets
+│   └── examples/          # Example applications
+├── tests/                 # Unit tests
+├── docs/                  # Documentation
+├── setup.py              # Package setup
+└── README.md             # This file
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with [PyQt6](https://www.riverbankcomputing.com/software/pyqt/)
+- Inspired by modern UI frameworks and design systems
+- Thanks to the PyQt community for their contributions
+
+## 📞 Support
+
+- 📧 Email: madhusudanmewadamm@gmail.com
+- 🐛 Issues: [GitHub Issues](https://github.com/madhusudanmewada/pyqt6-widgets-library/issues)
+- 💬 Discussions: [GitHub Discussions](https://github.com/madhusudanmewada/pyqt6-widgets-library/discussions)
+
+---
+
+**Made with ❤️ by Madhusudan Mewada**

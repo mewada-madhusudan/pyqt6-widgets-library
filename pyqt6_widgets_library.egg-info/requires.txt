@@ -1,0 +1,12 @@
+PyQt6>=6.4.0
+
+[dev]
+pytest>=7.0
+pytest-qt>=4.0
+black>=22.0
+flake8>=4.0
+mypy>=0.950
+pre-commit>=2.20.0
+
+[examples]
+Pillow>=9.0

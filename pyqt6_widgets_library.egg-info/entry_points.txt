@@ -1,0 +1,3 @@
+[console_scripts]
+pyqt6-cards-showcase = pyqt_widgets.examples.card_showcase:run_card_showcase
+pyqt6-widgets-demo = pyqt_widgets.examples.basic_examples:run_basic_examples

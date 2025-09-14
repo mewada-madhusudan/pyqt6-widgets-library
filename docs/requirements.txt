@@ -1,0 +1,12 @@
+# Documentation requirements
+sphinx>=5.0.0
+sphinx-rtd-theme>=1.2.0
+sphinx-autobuild>=2021.3.14
+myst-parser>=0.18.0
+
+# For API documentation
+sphinx-autodoc-typehints>=1.19.0
+sphinx-copybutton>=0.5.0
+
+# For examples and testing
+PyQt6>=6.4.0
